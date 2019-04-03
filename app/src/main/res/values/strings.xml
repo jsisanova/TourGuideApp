@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Tour Guide App</string>
+    <!-- Title for the Tour Guide Application. [CHAR LIMIT=14] -->
+    <string name="app_name">Visit BRIGHTON</string>
+
+    <!-- Category attractions for the top attractions in Brighton [CHAR LIMIT=20] -->
+    <string name="category_attractions">Attractions</string>
+
+    <!-- Category events for the main events happening in Brighton [CHAR LIMIT=20] -->
+    <string name="category_events">Events</string>
+
+    <!-- Category parks for the list of parks in Brighton [CHAR LIMIT=20] -->
+    <string name="category_parks">Parks</string>
+
+    <!-- Category pubs for the list of pubs in Brighton [CHAR LIMIT=20] -->
+    <string name="category_pubs">Pubs</string>
+
+    <!-- Test [CHAR LIMIT=20] -->
+    <string name="category_test">Test</string>
 </resources>
