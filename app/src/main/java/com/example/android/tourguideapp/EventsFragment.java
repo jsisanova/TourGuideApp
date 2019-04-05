@@ -22,6 +22,8 @@ public class EventsFragment extends Fragment {
     /** Handles audio focus when playing a sound file */
     private AudioManager mAudioManager;
 
+    private int lastSelectedPosition = -1;
+
     /**
      * This listener gets triggered whenever the audio focus changes
      * (i.e., we gain or lose audio focus because of another app or device).
@@ -107,9 +109,6 @@ public class EventsFragment extends Fragment {
         // get the Activity object instance first.
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
-//        ImageView stopArrow = (ImageView) rootView.findViewById(R.id.stop_arrow);
-
-
         // Create a list of attractions
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
         attractions.add(new Attraction("Brighton & Hove Half Marathon", "February", R.raw.run));
@@ -126,7 +125,7 @@ public class EventsFragment extends Fragment {
         // adapter knows how to create list items for each item in the list.
         // “this” refers to this class (which is the NumbersFragment), and a Fragment is not a valid Context - hence
         // we have to pass in a reference to the Activity that encloses this Fragment as the context = getActivity().
-        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_attractions);
+        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_attractions, true);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -170,15 +169,6 @@ public class EventsFragment extends Fragment {
                 }
             }
         });
-
-        // Pause
-//        stopArrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mMediaPlayer.pause();
-//            }
-//        });
-
         return rootView;
     }
 }

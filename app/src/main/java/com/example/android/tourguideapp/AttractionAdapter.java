@@ -2,12 +2,10 @@ package com.example.android.tourguideapp;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,26 +18,15 @@ import java.util.ArrayList;
 // and then the list item view is returned to ListView.
 public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
-//    class MyViewHolder extends RecyclerView.ViewHolder {
-//        public MyViewHolder(View itemView) {
-//            super(itemView);
-//            ImageView playArrow = (ImageView) itemView.findViewById(R.id.play_arrow);
-//        }
-//    }
-//
-//    @Override
-//    public void onBindViewHolder(final MyViewHolder holder, int position) {
-//        holder.playArrow.setVisibility(View.GONE);
-//    }
-
     /** Resource ID for the background color for this list of attractions */
     private int mColorResourceId;
+    private boolean showPlayButton;
 
     /** @param context  The current context. Used to inflate the layout file.
      @param attractions    A List of Attraction objects to display in a list
      @param colorResourceId is the resource ID for the background color for this list of attractions
      */
-    public AttractionAdapter(Context context, ArrayList<Attraction> attractions, int colorResourceId) {
+    public AttractionAdapter(Context context, ArrayList<Attraction> attractions, int colorResourceId, boolean showPlayButton) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
@@ -47,6 +34,8 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         // we are calling ArrayAdaptor's (superclass') constructor here
         super(context, 0, attractions);
         mColorResourceId = colorResourceId;
+
+        this.showPlayButton = showPlayButton;
     }
 
     /**
@@ -101,6 +90,10 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         // Set the background color of the text container View
         textContainer.setBackgroundColor(color);
+
+        if(!showPlayButton){
+            listItemView.findViewById(R.id.play_arrow).setVisibility(View.GONE);
+        }
 
         // Return the whole list item layout (containing 2 TextViews) from the word object
         // so that it can be shown in the ListView on screen
