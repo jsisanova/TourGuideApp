@@ -3,7 +3,7 @@
     <string name="app_name">Visit BRIGHTON</string>
 
     <!-- Category attractions for the top attractions in Brighton [CHAR LIMIT=20] -->
-    <string name="category_attractions">Attractions</string>
+    <string name="category_historical_sites">Historical sites</string>
 
     <!-- Category events for the main events happening in Brighton [CHAR LIMIT=20] -->
     <string name="category_events">Events</string>
