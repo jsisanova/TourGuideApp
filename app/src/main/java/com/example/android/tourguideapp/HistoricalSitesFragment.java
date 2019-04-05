@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import java.util.ArrayList;
 
@@ -18,6 +19,7 @@ public class HistoricalSitesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
+//        View secondView = inflater.inflate(R.layout.list_item, container, false);
 
         // Create a list of attractions
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();

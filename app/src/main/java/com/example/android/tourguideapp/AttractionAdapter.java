@@ -2,10 +2,12 @@ package com.example.android.tourguideapp;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,18 @@ import java.util.ArrayList;
 // create or reuse a list item layout. So the views will be updated based on the information in the Attraction object
 // and then the list item view is returned to ListView.
 public class AttractionAdapter extends ArrayAdapter<Attraction> {
+
+//    class MyViewHolder extends RecyclerView.ViewHolder {
+//        public MyViewHolder(View itemView) {
+//            super(itemView);
+//            ImageView playArrow = (ImageView) itemView.findViewById(R.id.play_arrow);
+//        }
+//    }
+//
+//    @Override
+//    public void onBindViewHolder(final MyViewHolder holder, int position) {
+//        holder.playArrow.setVisibility(View.GONE);
+//    }
 
     /** Resource ID for the background color for this list of attractions */
     private int mColorResourceId;
