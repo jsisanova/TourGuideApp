@@ -177,7 +177,14 @@ public class EventsFragment extends Fragment {
 //                isPlaying = true;
             }
         });
-//        Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
+
+        Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mMediaPlayer.stop();
+            }
+        });
 //
 //        if (isPlaying) {
 //          stopButton.setVisibility(View.VISIBLE);
@@ -188,6 +195,3 @@ public class EventsFragment extends Fragment {
         return rootView;
     }
 }
-//public void onClick(View v) {
-//    mMediaPlayer.pause();
-//}
