@@ -29,8 +29,6 @@ public class EventsFragment extends Fragment {
 
     private int lastSelectedPosition = -1;
 
-//    private boolean isPlaying = false;
-
     /**
      * This listener gets triggered whenever the audio focus changes
      * (i.e., we gain or lose audio focus because of another app or device).
@@ -109,7 +107,7 @@ public class EventsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.attractions_list, container, false);
+        final View rootView = inflater.inflate(R.layout.attractions_list, container, false);
 
         // Create and setup the {@link AudioManager} to request audio focus.
         // Fragment does not have access to system services, whereas the Activity does - that's why
@@ -143,6 +141,9 @@ public class EventsFragment extends Fragment {
         // {@link ListView} will display list items for each {@link Attraction} in the list.
         listView.setAdapter(adapter);
 
+        final Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
+        stopButton.setVisibility(View.INVISIBLE);
+
         // Set a click listener to play the audio when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -170,28 +171,21 @@ public class EventsFragment extends Fragment {
                     // Start the audio file
                     mMediaPlayer.start();
 
+                    stopButton.setVisibility(View.VISIBLE);
+                    stopButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            mMediaPlayer.stop();
+                            stopButton.setVisibility(View.GONE);
+                        }
+                    });
+                    
                     // Setup a listener on the media player, so that we can stop and release the
                     // media player once the sound has finished playing.
                     mMediaPlayer.setOnCompletionListener(mCompletionListener);
                 }
-//                isPlaying = true;
             }
         });
-
-        Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
-        stopButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mMediaPlayer.stop();
-            }
-        });
-//
-//        if (isPlaying) {
-//          stopButton.setVisibility(View.VISIBLE);
-//        }
-//        else {
-//            stopButton.setVisibility(View.INVISIBLE);
-//        }
         return rootView;
     }
 }
