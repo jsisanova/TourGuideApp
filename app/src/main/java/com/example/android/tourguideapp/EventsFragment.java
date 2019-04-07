@@ -10,19 +10,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import java.util.ArrayList;
 
 public class EventsFragment extends Fragment {
 
-    /** Handles playback of all the sound files */
+    /**
+     * Handles playback of all the sound files
+     */
     private MediaPlayer mMediaPlayer;
 
-    /** Handles audio focus when playing a sound file */
+    /**
+     * Handles audio focus when playing a sound file
+     */
     private AudioManager mAudioManager;
 
     private int lastSelectedPosition = -1;
+
+//    private boolean isPlaying = false;
 
     /**
      * This listener gets triggered whenever the audio focus changes
@@ -167,8 +174,20 @@ public class EventsFragment extends Fragment {
                     // media player once the sound has finished playing.
                     mMediaPlayer.setOnCompletionListener(mCompletionListener);
                 }
+//                isPlaying = true;
             }
         });
+//        Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
+//
+//        if (isPlaying) {
+//          stopButton.setVisibility(View.VISIBLE);
+//        }
+//        else {
+//            stopButton.setVisibility(View.INVISIBLE);
+//        }
         return rootView;
     }
 }
+//public void onClick(View v) {
+//    mMediaPlayer.pause();
+//}

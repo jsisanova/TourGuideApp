@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import java.util.ArrayList;
 
@@ -43,6 +44,9 @@ public class ParksFragment extends Fragment {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Attraction} in the list.
         listView.setAdapter(adapter);
+
+        Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
+        stopButton.setVisibility(View.INVISIBLE);
 
         return rootView;
     }
