@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_color" >
-<ListView
-    android:id="@+id/list"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:attr/selectableItemBackground"
-    android:drawSelectorOnTop="true"/>
+
+    <!-- Use ListView -->
+    <ListView
+        android:id="@+id/list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:drawSelectorOnTop="true"/>
     <!-- Show the pressed state on each list item (last 2 attributes) -->
 
     <!-- Add stop button visible just in EventsFragment, when the music is playing -->
@@ -25,5 +27,6 @@
         android:textSize="16dp"
         android:textStyle="bold"
         android:fontFamily="monospace"
+        android:visibility="invisible"
         android:text="Stop music"/>
 </RelativeLayout>

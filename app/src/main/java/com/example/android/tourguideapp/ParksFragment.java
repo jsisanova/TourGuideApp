@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 import java.util.ArrayList;
 
@@ -32,21 +31,15 @@ public class ParksFragment extends Fragment {
         attractions.add(new Attraction(R.drawable.carden_park, "Carden Park"));
         attractions.add(new Attraction(R.drawable.queens_park, "Queens Park"));
 
-        // Create an {@link AttractionAdapter}, whose data source is a list of {@link Attraction}s. The
-        // adapter knows how to create list items for each item in the list.
+        // Create an {@link AttractionAdapter}, whose data source is a list of {@link Attraction}s.
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_parks, false);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_listyout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Attraction} in the list.
         listView.setAdapter(adapter);
-
-        Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
-        stopButton.setVisibility(View.INVISIBLE);
 
         return rootView;
     }

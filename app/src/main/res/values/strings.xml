@@ -13,7 +13,4 @@
 
     <!-- Category pubs for the list of pubs in Brighton [CHAR LIMIT=20] -->
     <string name="category_pubs">Pubs</string>
-
-    <!-- Test [CHAR LIMIT=20] -->
-    <string name="category_test">Test</string>
 </resources>

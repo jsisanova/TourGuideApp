@@ -4,8 +4,6 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.view.View;
-import android.widget.ImageView;
 
 /**
  * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for

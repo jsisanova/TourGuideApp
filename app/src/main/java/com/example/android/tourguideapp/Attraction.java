@@ -2,8 +2,6 @@ package com.example.android.tourguideapp;
 
 /**
  * {@link Attraction} represents the attractions that are recommended for the visitors.
- * It contains a name of the attraction and it's brief description, evtl. an image
- * of the attraction or some audio.
  */
 public class Attraction {
 
@@ -76,7 +74,7 @@ public class Attraction {
     }
 
     /**
-     * Get the image resource ID of the Attraction.
+     * Get the image resource ID of the attraction.
      */
     public int getImageResourceId() {
         return mImageResourceId;
@@ -104,8 +102,8 @@ public class Attraction {
     public String getAttractionDescription() {
         return mAttractionDescription;
     }
+
     /**
-     *
      * Get the opening hours.
      */
     public String getOpeningHours() {

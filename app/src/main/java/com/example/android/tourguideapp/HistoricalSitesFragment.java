@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import java.util.ArrayList;
 
@@ -20,7 +18,6 @@ public class HistoricalSitesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.attractions_list, container, false);
-//        View secondView = inflater.inflate(R.layout.list_item, container, false);
 
         // Create a list of attractions
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
@@ -34,22 +31,15 @@ public class HistoricalSitesFragment extends Fragment {
         attractions.add(new Attraction(R.drawable.church, "St. Bartholomew's Church", "Opened: 1874"));
         attractions.add(new Attraction(R.drawable.railway, "Volk's Electric Railway", "Opened: 1883"));
 
-        // Create a {@link AttractionAdapter}, whose data source is a list of {@link Attraction}s. The
-        // adapter knows how to create list items for each item in the list.
+        // Create a {@link AttractionAdapter}, whose data source is a list of {@link Attraction}s.
         AttractionAdapter adapter =  new AttractionAdapter(getActivity(), attractions, R.color.category_events, false);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
-
 
         // Make the {@link ListView} use the {@link AttractionAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Attraction} in the list.
         listView.setAdapter(adapter);
-
-        Button stopButton = (Button) rootView.findViewById(R.id.stop_button);
-        stopButton.setVisibility(View.INVISIBLE);
 
         return rootView;
     }

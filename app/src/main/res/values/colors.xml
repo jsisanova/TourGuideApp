@@ -9,7 +9,7 @@
     <!-- Window background color -->
     <color name="background_color">#D4DDE1</color>
 
-    <!-- Background color for the attradtions category -->
+    <!-- Background color for the attractions category -->
     <color name="category_attractions">#8E9B97</color>
 
     <!-- Background color for the events category -->

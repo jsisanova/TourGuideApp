@@ -8,6 +8,7 @@
     android:layout_height="@dimen/list_item_height"
     android:minHeight="@dimen/list_item_height">
 
+    <!-- image left for the single list item -->
     <ImageView
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
@@ -18,49 +19,42 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
         android:layout_toRightOf="@id/image"
-        android:paddingLeft="14dp">
+        android:paddingLeft="16dp">
 
+        <!-- Text for the single list item (name of the attraction and description) -->
         <TextView
             android:id="@+id/name_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
+            style="@style/MyTextViewStyle"
+            android:layout_height="@dimen/name_text_view_height"
             android:gravity="bottom"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textAllCaps="true"
             tools:text="caption" />
 
         <TextView
             android:id="@+id/description_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
+            style="@style/MyTextViewStyle"
+            android:layout_height="@dimen/description_text_view_height"
             android:layout_below="@id/name_text_view"
-            android:layout_weight="1"
             android:gravity="top"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
             tools:text="second Text" />
 
         <TextView
             android:id="@+id/opening_hours_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
+            style="@style/MyTextViewStyle"
+            android:layout_height="@dimen/description_text_view_height"
             android:layout_below="@id/description_text_view"
-            android:layout_weight="1"
             android:gravity="top"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
             tools:text="second Text" />
 
+        <!-- Arrow indicating, that after clicking on list item sound will be played -->
         <ImageView
             android:id="@+id/play_arrow"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="14dp"
+            android:layout_marginRight="18dp"
             android:src="@drawable/play" />
     </RelativeLayout>
 </RelativeLayout>

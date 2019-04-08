@@ -8,38 +8,29 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
-
 // AttractionAdapter is a custom adapter that takes as it's input a list of Attraction objects
-// So when the list of item views is requested, it will find the view at the correct position and then
-// create or reuse a list item layout. So the views will be updated based on the information in the Attraction object
-// and then the list item view is returned to ListView.
 public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
     /** Resource ID for the background color for this list of attractions */
     private int mColorResourceId;
-    private boolean showPlayButton;
+    /** Boolean saying if the audio play button should be shown for the list of attractions*/
+    private boolean mShowPlayButton;
 
     /** @param context  The current context. Used to inflate the layout file.
      @param attractions    A List of Attraction objects to display in a list
      @param colorResourceId is the resource ID for the background color for this list of attractions
+     @param showPlayButton says if the audio play button should be shown for the list of attractions
      */
     public AttractionAdapter(Context context, ArrayList<Attraction> attractions, int colorResourceId, boolean showPlayButton) {
-        // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
-        // the second argument is used when the ArrayAdapter is populating a single TextView.
-        // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
-        // going to use this second argument (because we are inflating layout in getView method), so it can be any value. Here, we used 0.
-        // we are calling ArrayAdaptor's (superclass') constructor here
         super(context, 0, attractions);
         mColorResourceId = colorResourceId;
-
-        this.showPlayButton = showPlayButton;
+        this.mShowPlayButton = showPlayButton;
     }
 
     /**
-     * Provide a view for an AdapterView (ListView, GridView, etc.)
+     * Provide a view for an AdapterView (ListView)
      *
      * @param position The position in the list of data that should be displayed in the
      *                 list item view.
@@ -51,10 +42,9 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
     // Get a list item view that we can use (and return it to ListView)
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // EITHER by reusing - get the list item = {@link Word} object located at this position in the list
+        // EITHER by reusing
         View listItemView = convertView;
         // OR inflate (= create) new list item view from list_item.xml
-//        false is there, because we don't want to attach list item to parent ListView yet
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
@@ -91,12 +81,12 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         // Set the background color of the text container View
         textContainer.setBackgroundColor(color);
 
-        if(!showPlayButton){
+        // Hide play audio button, if showPlayButton is false
+        if(!mShowPlayButton){
             listItemView.findViewById(R.id.play_arrow).setVisibility(View.GONE);
         }
 
-        // Return the whole list item layout (containing 2 TextViews) from the word object
-        // so that it can be shown in the ListView on screen
+        // Return the whole list item layout so that it can be shown in the ListView on screen
         return listItemView;
     }
 }
