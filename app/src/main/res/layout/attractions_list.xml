@@ -28,5 +28,5 @@
         android:textStyle="bold"
         android:fontFamily="monospace"
         android:visibility="invisible"
-        android:text="Stop music"/>
+        android:text="@string/stop_music"/>
 </RelativeLayout>

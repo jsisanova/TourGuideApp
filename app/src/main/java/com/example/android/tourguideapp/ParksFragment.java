@@ -23,13 +23,13 @@ public class ParksFragment extends Fragment {
         // Create a list of attractions
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
 
-        attractions.add(new Attraction(R.drawable.preston_park, "Preston Park"));
-        attractions.add(new Attraction(R.drawable.blakers_park, "Blakers Park"));
-        attractions.add(new Attraction(R.drawable.east_brighton_park, "East Brighton Park"));
-        attractions.add(new Attraction(R.drawable.withdean_park, "Withdean Park"));
-        attractions.add(new Attraction(R.drawable.steine_gardens, "Steine Gardens"));
-        attractions.add(new Attraction(R.drawable.carden_park, "Carden Park"));
-        attractions.add(new Attraction(R.drawable.queens_park, "Queens Park"));
+        attractions.add(new Attraction(R.drawable.preston_park, getString(R.string.preston_park)));
+        attractions.add(new Attraction(R.drawable.blakers_park, getString(R.string.blakers_park)));
+        attractions.add(new Attraction(R.drawable.east_brighton_park, getString(R.string.east_brighton_park)));
+        attractions.add(new Attraction(R.drawable.withdean_park, getString(R.string.withdean_park)));
+        attractions.add(new Attraction(R.drawable.steine_gardens, getString(R.string.steine_gardens)));
+        attractions.add(new Attraction(R.drawable.carden_park, getString(R.string.carden_park)));
+        attractions.add(new Attraction(R.drawable.queens_park, getString(R.string.queens_park)));
 
         // Create an {@link AttractionAdapter}, whose data source is a list of {@link Attraction}s.
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_parks, false);

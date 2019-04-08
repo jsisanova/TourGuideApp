@@ -111,15 +111,15 @@ public class EventsFragment extends Fragment {
 
         // Create a list of attractions
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction("Brighton & Hove Half Marathon", "February", R.raw.run));
-        attractions.add(new Attraction("Pioneer Motorcycle Run", "March", R.raw.drive));
-        attractions.add(new Attraction("Foodies", "April", R.raw.food));
-        attractions.add(new Attraction("Brighton Festival", "May", R.raw.festival));
-        attractions.add(new Attraction("Brightons Big Screen", "July", R.raw.queen));
-        attractions.add(new Attraction("Brighton Pride", "August", R.raw.summer));
-        attractions.add(new Attraction("Ace Cafe Reunion", "September", R.raw.peter_bic));
-        attractions.add(new Attraction("Brighton Breeze", "October", R.raw.emeverz));
-        attractions.add(new Attraction("Burning the Clocks", "December", R.raw.ema_drobna));
+        attractions.add(new Attraction(getString(R.string.marathon), getString(R.string.marathon_description), R.raw.run));
+        attractions.add(new Attraction(getString(R.string.motorcycle_run), getString(R.string.motorcycle_run_description), R.raw.drive));
+        attractions.add(new Attraction(getString(R.string.foodies), getString(R.string.foodies_description), R.raw.food));
+        attractions.add(new Attraction(getString(R.string.festival), getString(R.string.festival_description), R.raw.festival));
+        attractions.add(new Attraction(getString(R.string.big_screen), getString(R.string.big_screen_description), R.raw.queen));
+        attractions.add(new Attraction(getString(R.string.pride), getString(R.string.pride_description), R.raw.summer));
+        attractions.add(new Attraction(getString(R.string.cafe_reunion), getString(R.string.cafe_reunion_description), R.raw.peter_bic));
+        attractions.add(new Attraction(getString(R.string.breeze), getString(R.string.breeze_description), R.raw.emeverz));
+        attractions.add(new Attraction(getString(R.string.burning_clocks), getString(R.string.burning_clocks_description), R.raw.ema_drobna));
 
         // Create an {@link AttractionAdapter}, whose data source is a list of {@link Attraction}s.
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_attractions, true);

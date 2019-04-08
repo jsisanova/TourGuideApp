@@ -13,4 +13,88 @@
 
     <!-- Category pubs for the list of pubs in Brighton [CHAR LIMIT=20] -->
     <string name="category_pubs">Pubs</string>
+
+    <!-- Text on button to stop music -->
+    <string name="stop_music">Stop music</string>
+
+    <!-- Attraction names and descriptions for historical sites category -->
+    <string name="brighton_pier">Brighton Pier</string>
+    <string name="brighton_pier_description">Opened: May 1899</string>
+    <string name="jubilee_clock_tower">Jubilee Clock Tower</string>
+    <string name="jubilee_clock_tower_description">Built in 1888</string>
+    <string name="fishing_museum">Brighton Fishing Museum</string>
+    <string name="fishing_museum_description">Opened: 1992</string>
+    <string name="west_pier">West Pier</string>
+    <string name="west_pier_description">Opened: October 6, 1866</string>
+    <string name="brighton_wheel">Brighton Wheel</string>
+    <string name="brighton_wheel_description">Closed: May 8, 2016</string>
+    <string name="royal_pavilion">Royal Pavilion</string>
+    <string name="royal_pavilion_description">Construction started: 1786</string>
+    <string name="church">St. Bartholomew\'s Church</string>
+    <string name="church_description">Opened: 1874</string>
+    <string name="railway">Volk\'s Electric Railway</string>
+    <string name="railway_description">Opened: 1883</string>
+
+    <!-- Attraction names and descriptions for events category -->
+    <string name="marathon">Brighton &amp; Hove Half Marathon</string>
+    <string name="marathon_description">February</string>
+    <string name="motorcycle_run">Pioneer Motorcycle Run</string>
+    <string name="motorcycle_run_description">March</string>
+    <string name="foodies">Foodies</string>
+    <string name="foodies_description">April</string>
+    <string name="festival">Brighton Festival</string>
+    <string name="festival_description">May</string>
+    <string name="big_screen">Brightons Big Screen</string>
+    <string name="big_screen_description">July</string>
+    <string name="pride">Brighton Pride</string>
+    <string name="pride_description">August</string>
+    <string name="cafe_reunion">Ace Cafe Reunion</string>
+    <string name="cafe_reunion_description">September</string>
+    <string name="breeze">Brighton Breeze</string>
+    <string name="breeze_description">October</string>
+    <string name="burning_clocks">Burning the Clocks</string>
+    <string name="burning_clocks_description">December</string>
+
+    <!-- Attraction names for parks category -->
+    <string name="preston_park">Preston Park</string>
+    <string name="blakers_park">Blakers Park</string>
+    <string name="east_brighton_park">East Brighton Park</string>
+    <string name="withdean_park">Withdean Park</string>
+    <string name="steine_gardens">Steine Gardens</string>
+    <string name="carden_park">Carden Park</string>
+    <string name="queens_park">Queens Park</string>
+    <string name="cricketers">The Cricketers</string>
+    <string name="cricketers_description">Black Lion St</string>
+    <string name="cricketers_opening_hours">Opening Hours: 11 am - 02 am</string>
+    <string name="lion_lobster"><![CDATA[The Lion & Lobster]]></string>
+    <string name="lion_lobster_description">24 Sillwood St</string>
+    <string name="lion_lobster_opening_hours">Opening Hours: 11 am - 01 am</string>
+    <string name="bath_arms">Bath Arms</string>
+    <string name="bath_arms_description">3-4 Meeting House Ln</string>
+    <string name="bath_arms_opening_hours">Opening Hours: 10 am - 11 pm</string>
+    <string name="north_laine">North Laine</string>
+    <string name="north_laine_description">27 Gloucester Pl</string>
+    <string name="north_laine_opening_hours">Opening Hours: 12 am - 02 am</string>
+    <string name="beer_dispensary">Brighton Beer Dispensary</string>
+    <string name="beer_dispensary_description">38 Dean St</string>
+    <string name="beer_dispensary_opening_hours">Opening Hours: 12 am - 01 am</string>
+    <string name="fortune_of_war">Fortune Of War</string>
+    <string name="fortune_of_war_description">156 Kings Rd</string>
+    <string name="fortune_of_war_opening_hours">Opening Hours: 11 am - 10 pm</string>
+    <string name="fiddlers_elbow">The Fiddlers Elbow</string>
+    <string name="fiddlers_elbow_description">11-12 Boyce\'s St</string>
+    <string name="fiddlers_elbow_opening_hours">Opening Hours: 08 pm - 02am</string>
+    <string name="black_dove">The Black Dove</string>
+    <string name="black_dove_description">74 St James\'s St</string>
+    <string name="black_dove_opening_hours">Opening Hours: 02 pm - 11 pm</string>
+    <string name="pump_house">The Pump House</string>
+    <string name="pump_house_description">46 Market St</string>
+    <string name="pump_house_opening_hours">Opening Hours: 08 am - 10 pm</string>
+    <string name="brighton_rocks">Brighton Rocks</string>
+    <string name="brighton_rocks_description">6 Rock Pl</string>
+    <string name="brighton_rocks_opening_hours">Opening Hours: 11 am - 01 am</string>
+
+    <!-- Attraction names, descriptions and opening hours for pubs category -->
+
+
 </resources>

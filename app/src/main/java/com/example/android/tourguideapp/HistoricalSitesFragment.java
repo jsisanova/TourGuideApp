@@ -22,14 +22,14 @@ public class HistoricalSitesFragment extends Fragment {
         // Create a list of attractions
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
 
-        attractions.add(new Attraction(R.drawable.brighton_pier, "Brighton Pier", "Opened: May 1899"));
-        attractions.add(new Attraction(R.drawable.clock, "Jubilee Clock Tower", " Built in 1888"));
-        attractions.add(new Attraction(R.drawable.museum, "Brighton Fishing Museum", "Opened: 1992"));
-        attractions.add(new Attraction(R.drawable.west_pier, "West Pier", "Opened: October 6, 1866"));
-        attractions.add(new Attraction(R.drawable.wheel, "Brighton Wheel", "Closed: May 8, 2016"));
-        attractions.add(new Attraction(R.drawable.royal_pavilion, "Royal Pavilion", "Construction started: 1786"));
-        attractions.add(new Attraction(R.drawable.church, "St. Bartholomew's Church", "Opened: 1874"));
-        attractions.add(new Attraction(R.drawable.railway, "Volk's Electric Railway", "Opened: 1883"));
+        attractions.add(new Attraction(R.drawable.brighton_pier, getString(R.string.brighton_pier), getString(R.string.brighton_pier_description)));
+        attractions.add(new Attraction(R.drawable.clock, getString(R.string.jubilee_clock_tower), getString(R.string.jubilee_clock_tower_description)));
+        attractions.add(new Attraction(R.drawable.museum, getString(R.string.fishing_museum), getString(R.string.fishing_museum_description)));
+        attractions.add(new Attraction(R.drawable.west_pier, getString(R.string.west_pier), getString(R.string.west_pier_description)));
+        attractions.add(new Attraction(R.drawable.wheel, getString(R.string.brighton_wheel), getString(R.string.brighton_wheel_description)));
+        attractions.add(new Attraction(R.drawable.royal_pavilion, getString(R.string.royal_pavilion), getString(R.string.royal_pavilion_description)));
+        attractions.add(new Attraction(R.drawable.church, getString(R.string.church), getString(R.string.church_description)));
+        attractions.add(new Attraction(R.drawable.railway, getString(R.string.railway), getString(R.string.railway_description)));
 
         // Create a {@link AttractionAdapter}, whose data source is a list of {@link Attraction}s.
         AttractionAdapter adapter =  new AttractionAdapter(getActivity(), attractions, R.color.category_events, false);
