@@ -63,6 +63,8 @@
     <string name="steine_gardens">Steine Gardens</string>
     <string name="carden_park">Carden Park</string>
     <string name="queens_park">Queens Park</string>
+
+    <!-- Attraction names, descriptions and opening hours for pubs category -->
     <string name="cricketers">The Cricketers</string>
     <string name="cricketers_description">Black Lion St</string>
     <string name="cricketers_opening_hours">Opening Hours: 11 am - 02 am</string>
@@ -93,8 +95,4 @@
     <string name="brighton_rocks">Brighton Rocks</string>
     <string name="brighton_rocks_description">6 Rock Pl</string>
     <string name="brighton_rocks_opening_hours">Opening Hours: 11 am - 01 am</string>
-
-    <!-- Attraction names, descriptions and opening hours for pubs category -->
-
-
 </resources>
