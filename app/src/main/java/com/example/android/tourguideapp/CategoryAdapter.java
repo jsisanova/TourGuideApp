@@ -56,14 +56,16 @@ public class CategoryAdapter extends FragmentPagerAdapter {
      */
     @Override
     public CharSequence getPageTitle(int position) {
-        if (position == 0) {
-            return mContext.getString(R.string.category_historical_sites);
-        } else if (position == 1) {
-            return mContext.getString(R.string.category_events);
-        } else if (position == 2) {
-            return mContext.getString(R.string.category_parks);
-        } else {
-            return mContext.getString(R.string.category_pubs);
+        switch (position) {
+            case 0:
+                return mContext.getString(R.string.category_historical_sites);
+            case 1:
+                return mContext.getString(R.string.category_events);
+            case 2:
+                return mContext.getString(R.string.category_parks);
+            default:
+                return  mContext.getString(R.string.category_pubs);
         }
     }
 }
+
