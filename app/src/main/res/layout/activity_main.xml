@@ -14,8 +14,9 @@
         android:id="@+id/tabs"
         style="@style/CategoryTab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"/>
+<!--    app:tabMode = fixed / scrollable (scrollable: we don't want that the titles in the tab get split on some devices-->
 
     <!-- Add ViewPager in MainActivity to swipe between 4 lists of words -->
     <android.support.v4.view.ViewPager
